@@ -12,7 +12,9 @@ app.get('/health', (req, res) => {
 })
 
 app.get('/version', (req, res) => {
-  res.send(process.env.VERSION) // change this string to ensure a new version deployed
+  // eslint-disable-next-line
+  console.log(process.env.VERSION)
+  res.send(process.env.VERSION)
 })
 
 app.listen(PORT, () => {
